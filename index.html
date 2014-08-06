@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<script src="colorClassifier.js"></script>
+	</head>
+	<body>
+		<script>
+			window.classifier = new ColorClassifier();
+
+			var data = [
+				{
+					r: 255,
+					g: 0,
+					b: 0,
+					label: 'red'
+				},
+				{
+					r: 0,
+					g: 0,
+					b: 255,
+					label: 'blue'
+				},
+				{
+					r: 160,
+					g: 32,
+					b: 240,
+					label: 'purple'
+				},
+				{
+					r: 0,
+					g: 0,
+					b: 255,
+					label: 'green'
+				},
+				{
+					r: 255,
+					g: 255,
+					b: 0,
+					label: 'yellow'
+				}
+
+
+			];
+
+			getDataFromVariable(data, function(data) {
+				classifier.learn(data);
+			});
+
+		</script>
+	</body>
+</html>
